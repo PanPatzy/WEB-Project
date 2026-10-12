@@ -9,13 +9,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#dfe5ee;--card:#f7f9fc;--ink:#18212b;--muted:#566272;--accent:#2742e6;--line:#cfd6df;--glow:rgba(39,66,230,.14);--g1:#2f9e55;--g2:#37ad60;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{--bg:#dfe5ee;--card:#f7f9fc;--ink:#18212b;--muted:#566272;--accent:#2742e6;--line:#cfd6df;--glow:rgba(39,66,230,.14);--g1:#2f9e55;--g2:#37ad60}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0e13;--card:#10151c;--ink:#e8ecf2;--muted:#9aa6b6;--accent:#8aa0ff;--line:#2a3441;--glow:rgba(138,160,255,.16);--g1:#1f6e3c;--g2:#257a44}}
 :root[data-theme="dark"]{--bg:#0a0e13;--card:#10151c;--ink:#e8ecf2;--muted:#9aa6b6;--accent:#8aa0ff;--line:#2a3441;--glow:rgba(138,160,255,.16);--g1:#1f6e3c;--g2:#257a44}
 html{scroll-padding-top:5rem;scroll-behavior:smooth}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;padding:clamp(.75rem,3vw,2rem) clamp(1rem,8vw,7rem)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6;padding:calc(env(safe-area-inset-top,0px) + clamp(1.5rem,5vw,3.5rem)) clamp(1rem,8vw,7rem) calc(env(safe-area-inset-bottom,0px) + clamp(1.5rem,5vw,3.5rem))}
 .page{max-width:60rem;margin:0 auto;background:var(--card);border:1px solid var(--line);border-radius:1.5rem;
 background-image:radial-gradient(circle at 100% 0,var(--glow),transparent 38%),radial-gradient(circle at 0 60%,var(--glow),transparent 30%)}
 .wrap{padding:0 clamp(1.25rem,5vw,3rem)}
@@ -45,6 +44,8 @@ section{display:grid;grid-template-columns:9rem 1fr;gap:1rem 2rem;border-top:1px
 h2{font-size:1rem;margin:0;font-weight:700;color:var(--muted)}
 h2::before{content:"";display:inline-block;width:.7rem;height:.7rem;border-radius:50%;background:var(--accent);margin-right:.5rem}
 p{margin:0 0 .75rem;max-width:34rem}
+.intro,.outro{max-width:40rem;color:var(--muted);margin:0 0 2rem}
+.outro{margin:2rem 0 0}
 a{color:var(--accent);text-underline-offset:.2em}
 a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;border-radius:0 0 1.5rem 1.5rem}
@@ -76,6 +77,7 @@ footer a{color:var(--muted)}
 <div class="pitch" aria-hidden="true"><span class="box t"></span><span class="box b"></span><span class="ball"></span></div>
 </div>
 <div class="stripe" aria-hidden="true"></div>
+<p class="intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio praesent libero, sed cursus ante dapibus diam. Sed nisi nulla quis sem at nibh elementum imperdiet.</p>
 
 <section id="o-mne">
 <h2>O mně</h2>
@@ -99,6 +101,7 @@ footer a{color:var(--muted)}
 <p>Napište mi na <a href="mailto:patrik@example.com">patrik@example.com</a>.</p>
 </div>
 </section>
+<p class="outro">Duis sagittis ipsum praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa vestibulum lacinia arcu eget nulla, class aptent taciti sociosqu ad litora torquent.</p>
 </main>
 
 <footer>
