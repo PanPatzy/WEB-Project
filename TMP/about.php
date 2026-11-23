@@ -3,6 +3,7 @@
 // Úkol A
 for ($i = 1; $i <= 10; $i++) {
     echo $i . "<br>";
+
 }
 
 echo "<hr>";
@@ -71,4 +72,15 @@ do {
     echo "Do while cyklus<br>";
 } while ($number < 5);
 
+?>
+// Úkol J
+$number = 10;
+
+while ($number < 6) {
+    echo "While cyklus<br>";
+}
+
+do {
+    echo "Do while cyklus<br>";
+} while ($number < 6);
 ?>
